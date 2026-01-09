@@ -1,0 +1,95 @@
+body{
+  background:linear-gradient(135deg,#0f172a,#1e293b);
+  font-family:Segoe UI,Arial;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+  margin:0;
+}
+
+.app{
+  width:380px;
+}
+
+.header{
+  color:white;
+  text-align:center;
+  font-size:20px;
+  margin-bottom:10px;
+  font-weight:600;
+}
+
+.panel{
+  background:#f8fafc;
+  padding:16px;
+  border-radius:10px;
+  box-shadow:0 15px 30px rgba(0,0,0,.4);
+}
+
+label{
+  font-size:12px;
+  margin-top:10px;
+  display:block;
+  color:#334155;
+}
+
+input, textarea{
+  width:100%;
+  padding:8px;
+  border-radius:6px;
+  border:1px solid #cbd5e1;
+  margin-top:4px;
+  box-sizing:border-box;
+  font-size:14px;
+}
+
+textarea{
+  resize:none;
+  height:60px;
+}
+
+.row{
+  display:flex;
+  gap:10px;
+}
+
+.buttons{
+  margin:12px 0;
+  display:flex;
+  justify-content:space-between;
+}
+
+button{
+  flex:1;
+  margin:0 4px;
+  padding:8px;
+  border:none;
+  border-radius:6px;
+  cursor:pointer;
+  font-weight:600;
+  background:#e2e8f0;
+}
+
+button.primary{
+  background:#2563eb;
+  color:white;
+}
+
+button.danger{
+  background:#dc2626;
+  color:white;
+}
+
+button:hover{
+  opacity:0.9;
+}
+
+#status{
+  text-align:center;
+  font-size:12px;
+  margin-top:6px;
+  color:#16a34a;
+  opacity:0;
+  transition:opacity .3s;
+}
