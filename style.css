@@ -12,7 +12,7 @@ body{
 
 
 .app{
-  width:1100px;
+  width:1900px;
 }
 
 
@@ -285,7 +285,51 @@ textarea:focus{
   animation:scan 2s infinite;
 }
 
+/*ACCESOS APPS*/
 
+.modern-panel{
+  background:rgba(255,255,255,0.08);
+  backdrop-filter:blur(12px);
+  padding:18px;
+  border-radius:18px;
+  width:220px;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  border:1px solid rgba(255,255,255,0.1);
+}
+
+.modern-panel a{
+  text-decoration:none;
+  color:white;
+  padding:12px;
+  border-radius:14px;
+  font-weight:700;
+  text-align:center;
+  background:linear-gradient(135deg,#0f172a,#1e293b);
+  transition:all .3s ease;
+  position:relative;
+  overflow:hidden;
+}
+
+.modern-panel a::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(120deg,transparent,rgba(255,255,255,.3),transparent);
+  transform:translateX(-100%);
+  transition:.5s;
+}
+
+.modern-panel a:hover::before{
+  transform:translateX(100%);
+}
+
+.modern-panel a:hover{
+  transform:translateY(-3px) scale(1.03);
+  box-shadow:0 10px 30px rgba(0,0,0,.5);
+  background:linear-gradient(135deg,#2563eb,#1d4ed8);
+}
 
 
 
