@@ -20,6 +20,22 @@
       <input id="nombre" placeholder="Ej: luis armando paredes fuertes">
     </div>
   </div>
+<div class="mini-panel">
+  <label>Formato ESIM</label>
+
+  <input id="linea" placeholder="Línea">
+  <input id="ruc" placeholder="RUC">
+  <input id="cuenta" placeholder="Cuenta">
+  <input id="email" placeholder="E-mail">
+  <input id="costo" placeholder="Con costo (Sí/No)">
+
+  <textarea id="detalleFinal" readonly></textarea>
+
+  <button onclick="generarDetalle()">Generar</button>
+  <button onclick="copiarDetalle()">Copiar</button>
+</div>
+
+  
 
   <!-- COLUMNA DERECHA -->
   <div class="column">
@@ -35,11 +51,22 @@
       <div class="row">
         <div>
           <label>ID Inicio</label>
-          <input id="idi" type="number" placeholder="100">
+          <input id="idi" 
+       type="text" 
+       inputmode="numeric"
+       maxlength="10"
+       placeholder="100"
+       oninput="this.value=this.value.replace(/\D/g,'').slice(0,10)">
         </div>
+        
         <div>
           <label>ID Final</label>
-          <input id="idf" type="number" placeholder="200">
+          <input id="idf" 
+       type="text" 
+       inputmode="numeric"
+       maxlength="10"
+       placeholder="200"
+       oninput="this.value=this.value.replace(/\D/g,'').slice(0,10)">
         </div>
       </div>
 
@@ -63,9 +90,17 @@
 
 </div>
 
+<footer class="footer" id="footerText">
+  © 2026 · Creado por Sebastian · Tipificador v1.0
+</footer>
+
+
 
 <script src="app.js"></script>
 <script src="nombre.js"></script>
+<script src="detalle.js"></script>
+<script src="footer.js"></script>
+
 
 </body>
 

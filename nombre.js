@@ -8,5 +8,11 @@ inputNombre.addEventListener("blur", () => {
 
   if (texto.length === 0) return;
 
-  inputNombre.value = "Elvis Enrique Sebastian Cuellar";
+  const palabras = texto.split(" ");
+
+  const formateado = palabras
+    .map(p => p.charAt(0).toUpperCase() + p.slice(1))
+    .join(" ");
+
+  inputNombre.value = formateado;
 });
