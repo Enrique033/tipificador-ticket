@@ -6,45 +6,67 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
 <div class="app">
-  <div class="header">Tipificador de Ticket</div>
 
-  <div class="panel">
-    <label>ID Call (opcional)</label>
-    <input id="idcall" placeholder="Ej: 335921">
+  <div class="layout">
 
-    <label>RQ (Observación)</label>
-    <textarea id="rq" placeholder="Describe el caso..."></textarea>
+  <!-- COLUMNA IZQUIERDA -->
+  <div class="column">
+    <div class="panel-title">Ingresa Nombres</div>
 
-    <div class="row">
-      <div>
-        <label>ID Inicio</label>
-        <input id="idi" type="number" placeholder="100">
-      </div>
-      <div>
-        <label>ID Final</label>
-        <input id="idf" type="number" placeholder="200">
-      </div>
+    <div class="side-panel">
+      <label>Ingrese Nombres y Apellidos</label>
+      <input id="nombre" placeholder="Ej: luis armando paredes fuertes">
     </div>
-
-    <div class="buttons">
-      <button class="primary" onclick="crear()">Crear</button>
-      <button onclick="copiar()">Copiar</button>
-      <button class="danger" onclick="borrar()">Borrar</button>
-    </div>
-
-    <div class="buttons">
-      <button onclick="anterior()">⬅ Anterior</button>
-      <button onclick="siguiente()">Siguiente ➡</button>
-    </div>
-
-    <label>Resultado</label>
-    <textarea id="out" readonly></textarea>
-
-    <div id="status"></div>
   </div>
+
+  <!-- COLUMNA DERECHA -->
+  <div class="column">
+    <div class="panel-title">Tipificador</div>
+
+    <div class="panel">
+      <label>ID Call (opcional)</label>
+      <input id="idcall" placeholder="Ej: 335921">
+
+      <label>RQ (Observación)</label>
+      <textarea id="rq" placeholder="Describe el caso..."></textarea>
+
+      <div class="row">
+        <div>
+          <label>ID Inicio</label>
+          <input id="idi" type="number" placeholder="100">
+        </div>
+        <div>
+          <label>ID Final</label>
+          <input id="idf" type="number" placeholder="200">
+        </div>
+      </div>
+
+      <div class="buttons">
+        <button class="primary" onclick="crear()">Crear</button>
+        <button onclick="copiar()">Copiar</button>
+        <button class="danger" onclick="borrar()">Borrar</button>
+      </div>
+
+      <div class="buttons">
+        <button onclick="anterior()">⬅ Anterior</button>
+        <button onclick="siguiente()">Siguiente ➡</button>
+      </div>
+
+      <label>Resultado</label>
+      <textarea id="out" readonly></textarea>
+
+      <div id="status"></div>
+    </div>
+  </div>
+
 </div>
 
+
 <script src="app.js"></script>
+<script src="nombre.js"></script>
+
 </body>
+
 </html>
